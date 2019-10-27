@@ -1,0 +1,11 @@
+apply plugin: 'java'
+apply plugin: 'kotlin'
+apply from: rootProject.file('frozen/publish.gradle')
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation gradleApi()
+//    implementation "com.xx.lib_client:lib_client:1.0.0"
+    compileOnly "com.android.tools.build:gradle:3.2.1"
+}
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

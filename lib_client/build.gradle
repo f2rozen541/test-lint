@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+apply from: rootProject.file('lib_client/publish.gradle')
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation ('com.android.tools.lint:lint-gradle:26.2.1') {
+        exclude group: "com.android.tools.build"
+    }
+    compileOnly gradleApi()
+    compileOnly("com.android.tools.build:gradle:3.2.1")
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

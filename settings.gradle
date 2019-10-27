@@ -1,0 +1,4 @@
+include ':app'
+include ':frozen'
+include ':lib_client'
+rootProject.name='My Application'
